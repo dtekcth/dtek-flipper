@@ -1,0 +1,25 @@
+{
+  "name": "dtek-flipper-server",
+  "version": "0.0.1",
+  "description": "Datateknologsektionens flipperbetalningssystem, server files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtekcth/dtek-flipper.git"
+  },
+  "keywords": [
+    "flipper",
+    "pinball",
+    "dtek"
+  ],
+  "author": "Emil Hemdal <emil@hemdal.se>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dtekcth/dtek-flipper/issues"
+  },
+  "homepage": "https://github.com/dtekcth/dtek-flipper#readme",
+  "private": true
+}

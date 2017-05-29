@@ -1,0 +1,40 @@
+{
+  "name": "dtek-flipper",
+  "version": "0.0.1",
+  "description": "Datateknologsektionens flipperbetalningssystem, client files",
+  "scripts": {
+    "build": "npm run js && npm run css && npm run html && npm run precompress",
+    "buildraw": "npm run jsraw && npm run cssraw && npm run htmlraw",
+    "html": "cat src/index.html | node node_modules/html-minifier/cli.js --html5 --collapse-whitespace > dist/index.html",
+    "htmlraw": "cat src/index.html > dist/index.html",
+    "js": "cat src/js/script.js | node node_modules/uglify-js/bin/uglifyjs --mangle --compress > dist/script.min.js",
+    "jsraw": "cat src/js/script.js > dist/script.min.js",
+    "css": "cat src/external/mobi.css/dist/mobi.css src/css/style.css | node node_modules/cssnano-cli/cmd.js > dist/style.min.css",
+    "cssraw": "cat src/external/mobi.css/dist/mobi.css src/css/style.css > dist/style.min.css",
+    "precompress": "rm -f dist/*.gz && gzip --best --keep --force dist/*",
+    "clean": "rm -f dist/*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtekcth/dtek-flipper.git"
+  },
+  "keywords": [
+    "flipper",
+    "pinball",
+    "dtek"
+  ],
+  "author": "Emil Hemdal <emil@hemdal.se>",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dtekcth/dtek-flipper/issues"
+  },
+  "homepage": "https://github.com/dtekcth/dtek-flipper#readme",
+  "private": true,
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5",
+    "html-minifier": "^3.5.2",
+    "jshint": "^2.9.4",
+    "uglify-js": "^3.0.13"
+  }
+}
